@@ -1,17 +1,19 @@
-# Nigiri
+# Nigiri 🐠
 
-A theme for [fish shell](https://fishshell.com/).
+A theme for the [fish shell](https://fishshell.com/) inspired by [oh-my-fish](https://github.com/oh-my-fish/theme-default)'s default theme.
 
 ![Nigiri screenshot](https://github.com/MisanthropicBit/nigiri/raw/master/screenshot.png)
 
-# Install
+## Install
+
+Clone the repository and add the following to your `.config.fish`.
 
 ```bash
-$ omf install nigiri
-$ fisher nigiri
+source fish_prompt.fish
+source fish_right_prompt.fish
 ```
 
-# Options
+## Options
 
-* Shorten the parts of the path except the last one: `set -g theme_short_path (yes|no)`
-* Show a house emoji when in the home directory: `set -g theme_home_emoji (yes|no)`
+* If 'yes', show only the last part of the path: `set -g theme_short_path (yes|no)`
+* If 'yes', show a house emoji when in the home directory: `set -g theme_home_emoji (yes|no)`
