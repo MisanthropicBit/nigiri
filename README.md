@@ -1,3 +1,5 @@
+# Nigiri
+
 A theme for [fish shell](https://fishshell.com/).
 
 ![Nigiri screenshot](https://github.com/MisanthropicBit/nigiri/raw/master/screenshot.png)
