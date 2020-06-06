@@ -1,4 +1,4 @@
-# Nigiri 🐠
+# Nigiri 🍣
 
 A theme for the [fish shell](https://fishshell.com/) inspired by [oh-my-fish](https://github.com/oh-my-fish/theme-default)'s default theme.
 
@@ -9,8 +9,8 @@ A theme for the [fish shell](https://fishshell.com/) inspired by [oh-my-fish](ht
 Clone the repository and add the following to your `.config.fish`.
 
 ```bash
-source fish_prompt.fish
-source fish_right_prompt.fish
+source <location-of-nigiri-files>/fish_prompt.fish
+source <location-of-nigiri-files>/fish_right_prompt.fish
 ```
 
 ## Options
