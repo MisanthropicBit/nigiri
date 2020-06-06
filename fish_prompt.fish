@@ -119,7 +119,12 @@ function fish_prompt
     echo_user "$root" "$fish" "$last_command_status" "$sushi"
     echo_last_return_value "$last_command_status"
     echo_cwd $cwd $directory_color
-    echo -ns " $job_color("(jobs | wc -l | string trim -lr)")$normal_color"
+
+    set -l job_count (jobs | wc -l | string trim -lr)
+
+    if test "$job_count" -gt 0
+        echo -ns " $job_color("(jobs | wc -l | string trim -lr)")$normal_color"
+    end
 
     if git_is_repo
         echo -ns " on " $repository_color (git_branch_name) $normal_color " "
