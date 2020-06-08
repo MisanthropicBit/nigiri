@@ -13,6 +13,10 @@ source <location-of-nigiri-files>/fish_prompt.fish
 source <location-of-nigiri-files>/fish_right_prompt.fish
 ```
 
+If the computed prompt length is wrong, please see
+[`fish_emoji_width`](https://fishshell.com/docs/current/index.html?highlight=unicode#special-variables)
+and check your terminal's settings.
+
 ## Options
 
 * If 'yes', show only the last part of the path: `set -g theme_short_path (yes|no)`
