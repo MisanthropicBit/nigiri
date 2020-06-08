@@ -22,9 +22,9 @@ function echo_user -a root fish last_command_status sushi -d 'Echo user fish'
             set user "$fish"
         end
 
-        echo -ns "$user"
+        echo -ns "$user "
     else
-        echo -ns "$sushi"
+        echo -ns "$sushi "
     end
 end
 
