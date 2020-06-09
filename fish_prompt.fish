@@ -36,7 +36,7 @@ function echo_cwd -a cwd directory_color -d 'Echo the current working directory'
     end
 
     if test "$cwd" = "~" -a "$theme_emoji_home" = "yes"
-        echo -n " 🏡"
+        echo -n " 🏡 "
     else
         echo -n " $directory_color$cwd"(set_color normal)
     end
