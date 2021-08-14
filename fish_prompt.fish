@@ -69,6 +69,10 @@ function git_branch_name -d "Get current branch name"
     git symbolic-ref --short HEAD 2> /dev/null; or git show-ref --head -s --abbrev | head -n1 2> /dev/null
 end
 
+function git_branch_commit -d "Get the commit of the current HEAD"
+    git rev-parse --short HEAD
+end
+
 function git_is_dirty -d "Check if there are changes to tracked files"
     not git diff --no-ext-diff --quiet
 end
@@ -127,7 +131,7 @@ function fish_prompt
     end
 
     if git_is_repo
-        echo -ns " on " $repository_color (git_branch_name) $normal_color " "
+        echo -ns " on " $repository_color (git_branch_name) "[" (git_branch_commit) "]" $normal_color " "
 
         set -l git_status (echo_git_ahead\
                            "$git_ahead_color$ahead"\
