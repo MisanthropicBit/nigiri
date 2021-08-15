@@ -113,6 +113,7 @@ function fish_prompt
     set -l job_color              (set_color b79fe7 --bold brmagenta)
     set -l directory_color        (set_color ffffa3 --bold bryellow)
     set -l repository_color       (set_color 9cc29c --bold brgreen)
+    set -l repo_commit_color      (set_color 4e8fb7 --bold brblue)
     set -l git_dirty_color        (set_color ff392e --bold yellow)
     set -l git_diverged_color     (set_color f589a6 --bold brred)
     set -l git_stashed_color      (set_color e0cb75 --bold bryellow)
@@ -131,7 +132,7 @@ function fish_prompt
     end
 
     if git_is_repo
-        echo -ns " on " $repository_color (git_branch_name) "[" (git_branch_commit) "]" $normal_color " "
+        echo -ns " on " $repository_color (git_branch_name) "[" $repo_commit_color (git_branch_commit) $repository_color "]" $normal_color " "
 
         set -l git_status (echo_git_ahead\
                            "$git_ahead_color$ahead"\
