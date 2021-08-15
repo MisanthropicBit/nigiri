@@ -107,18 +107,18 @@ function fish_prompt
     set -l dirty    "×"
     set -l none     "◦"
 
-    set -l normal_color       (set_color normal)
-    set -l brwhite            (set_color brwhite)
-    set -l success_color      (set_color 00e6e6 --bold brcyan)
-    set -l job_color          (set_color 9370db --bold brmagenta)
-    set -l directory_color    (set_color ffff89 --bold bryellow)
-    set -l repository_color   (set_color 78ab78 --bold brgreen)
-    set -l git_dirty_color    (set_color ff392e --bold yellow)
-    set -l git_diverged_color (set_color f589a6 --bold brred)
-    set -l git_stashed_color  (set_color e0cb75 --bold bryellow)
-    set -l git_staged_color   (set_color ffa500 --bold bryellow)
-    set -l git_ahead_color    (set_color 1e90ff --bold brblue)
-    set -l git_behind_color   (set_color 1e90ff --bold brblue)
+    set -l normal_color           (set_color normal)
+    set -l brwhite                (set_color brwhite)
+    set -l success_color          (set_color 00e6e6 --bold brcyan)
+    set -l job_color              (set_color b79fe7 --bold brmagenta)
+    set -l directory_color        (set_color ffffa3 --bold bryellow)
+    set -l repository_color       (set_color 9cc29c --bold brgreen)
+    set -l git_dirty_color        (set_color ff392e --bold yellow)
+    set -l git_diverged_color     (set_color f589a6 --bold brred)
+    set -l git_stashed_color      (set_color e0cb75 --bold bryellow)
+    set -l git_staged_color       (set_color ffa500 --bold bryellow)
+    set -l git_ahead_color        (set_color 1e90ff --bold brblue)
+    set -l git_behind_color       (set_color 1e90ff --bold brblue)
 
     echo_user "$root" "$fish" "$last_command_status" "$sushi"
     echo_last_return_value "$last_command_status"
