@@ -137,7 +137,7 @@ function fish_prompt
     set -l job_count (jobs | wc -l | string trim -lr)
 
     if test "$job_count" -gt 0
-        echo -ns " $job_color("(jobs | wc -l | string trim -lr)")$normal_color"
+        echo -ns " $job_color($job $job_count)$normal_color"
     end
 
     if git_is_repo
