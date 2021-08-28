@@ -157,5 +157,7 @@ function fish_prompt
         echo -ns $normal_color "[$markers$normal_color]"
     end
 
-    echo -ns " "
+    if [ "$theme_end_space" = "yes" ]
+        echo -ns " "
+    end
 end
