@@ -19,5 +19,10 @@ and check your terminal's settings.
 
 ## Options
 
-* If 'yes', show only the last part of the path: `set -g theme_short_path (yes|no)`
-* If 'yes', show a house emoji when in the home directory: `set -g theme_home_emoji (yes|no)`
+Enable options by setting them to `'yes'`.
+
+* `theme_short_path`: Show only the last part of the path.
+* `theme_home_emoji`: Show a house emoji 🏡when in the home directory.
+* `theme_nerd_fonts`: Use [nerd fonts](https://www.nerdfonts.com/#home) symbols.
+* `theme_end_space`: Add a space at the end of the prompt. Useful with wide
+  unicode characters in some terminals.
