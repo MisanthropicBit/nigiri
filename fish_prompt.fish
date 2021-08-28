@@ -98,28 +98,37 @@ function fish_prompt
     set -l fish     "🐠"
     set -l root     "🦈"
     set -l sushi    "🍣"
-    set -l clean    "✓"
-    set -l ahead    "↑"
-    set -l behind   "↓"
-    set -l diverged "⥄ "
-    set -l stashed  "⁕"
-    set -l staged   "●"
-    set -l dirty    "×"
-    set -l none     "◦"
+    set -l clean
+    set -l ahead
+    set -l behind
+    set -l diverged
+    set -l stashed
+    set -l staged
+    set -l dirty
+    set -l none
+    set -l job
 
-    set -l normal_color           (set_color normal)
-    set -l brwhite                (set_color brwhite)
-    set -l success_color          (set_color 00e6e6 --bold brcyan)
-    set -l job_color              (set_color b79fe7 --bold brmagenta)
-    set -l directory_color        (set_color ffffa3 --bold bryellow)
-    set -l repository_color       (set_color 9cc29c --bold brgreen)
-    set -l repo_commit_color      (set_color 4e8fb7 --bold brblue)
-    set -l git_dirty_color        (set_color ff392e --bold yellow)
-    set -l git_diverged_color     (set_color f589a6 --bold brred)
-    set -l git_stashed_color      (set_color e0cb75 --bold bryellow)
-    set -l git_staged_color       (set_color ffa500 --bold bryellow)
-    set -l git_ahead_color        (set_color 1e90ff --bold brblue)
-    set -l git_behind_color       (set_color 1e90ff --bold brblue)
+    if [ "$theme_nerd_fonts" = "yes" ]
+        set clean    ""
+        set ahead    ""
+        set behind   ""
+        set diverged ""
+        set stashed  ""
+        set staged   ""
+        set dirty    ""
+        set none     ""
+        set job      ""
+    else
+        set clean    "✓"
+        set ahead    "↑"
+        set behind   "↓"
+        set diverged "⥄ "
+        set stashed  "⁕"
+        set staged   "●"
+        set dirty    "×"
+        set none     "◦"
+        set job      "⚡"
+    end
 
     echo_user "$root" "$fish" "$last_command_status" "$sushi"
     echo_last_return_value "$last_command_status"
